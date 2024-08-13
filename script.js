@@ -8,10 +8,11 @@ let intervalId;
 
 function printCircles(lines){
     outPutContainer.innerHTML = ''
-    for(let i = 1; i<=lines ; i++){
+    for(let i = 0; i<lines ; i++){
         const row = document.createElement('div')
         row.classList.add('row')
-        for(let j = 2; j<=i ; j++){
+        const odd = i*2 + 1
+        for(let j = 1; j<=odd ; j++){
             const circle = document.createElement('div')
             circle.classList.add('symbol')
             row.appendChild(circle)
